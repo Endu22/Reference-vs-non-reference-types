@@ -24,3 +24,23 @@ Delegate: `Action`, `Func<int, string>`, `Predicate<T>`
 array: All arrays are reference types. For example `int[]`.
 
 record: `record Person(string Name, int Age)`
+
+
+# Stack VS Heap
+## Stack:
+The stack is a quick and small memory allocation area. 
+The stack is used for `local variables`, `method calls` & `return addresses` etc.
+The stack is managed automatically. It's design allows a LIFO functionality (last in, first out).
+Non reference types are stored directly on the stack. e.g `int x = 5` is stored on the stack.
+The values stored on the stack is popped automatically when a method completes. 
+
+Non-reference types or `Value types` as they are called is normally stored on the stack. However if they are part of an object they can be stored on the heap.
+
+## Heap:
+The heap is a slower and larger memory allocation area. This is used for objects that are created dynamically.
+An example of this is `var person = new Person();`. The person object is stored on the heap but the reference to the object is stored on the stack.
+The heap requires garbage collection. In `C#` this is done automatically but in languages such as `C` or `C++` the garbage collection has to be done manually.
+
+# Threads:
+Every thread in a program has its own stack. A method call is equal to one "stack frame". When a method is called an activation record is added to the stack frame. It contains the methods parameters, local variables and a return address so that the programmme knows where to jump to next.
+
