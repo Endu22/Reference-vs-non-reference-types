@@ -42,5 +42,5 @@ An example of this is `var person = new Person();`. The person object is stored 
 The heap requires garbage collection. In `C#` this is done automatically but in languages such as `C` or `C++` the garbage collection has to be done manually.
 
 # Threads:
-Every thread in a program has its own stack. A method call is equal to one "stack frame". When a method is called an activation record is added to the stack frame. It contains the methods parameters, local variables and a return address so that the programmme knows where to jump to next.
+Every thread in a program has its own stack. A method call is equal to one "stack frame". When a method is called an activation record is added to the stack frame. It contains the methods parameters, local variables and a return address so that the program knows where to jump to next.
 
