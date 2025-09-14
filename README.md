@@ -12,7 +12,7 @@ A special struct is the `Nullable<T>`. An example of this is: `int?`. This is to
 
 
 # Reference types:
-Refernce types are stored as pointers on the heap. When a variable is copied, both copies point to the same object.
+Refernce types are stored on the heap and a pointer to the reference type object is stored on the stack. When a variable is copied, both copies point to the same object.
 
 ## All reference types:
 `object`, `string`, `Exception`, `Stream`, `Form`, `Task` and own classes.
